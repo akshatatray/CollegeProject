@@ -1,0 +1,14 @@
+{
+    "cols": [
+        {"id":"","label":"Task","pattern":"","type":"string"},
+        {"id":"","label":"no. of students","pattern":"","type":"number"}
+      ],
+
+      "rows": [
+        {"c":[{"v":"Monday","f":null},{"v":58,"f":null}]},
+        {"c":[{"v":"Tuesday","f":null},{"v":12,"f":null}]},
+        {"c":[{"v":"Wednesday","f":null},{"v":64,"f":null}]},
+        {"c":[{"v":"Thursday","f":null},{"v":60,"f":null}]},
+        {"c":[{"v":"Friday","f":null},{"v":34,"f":null}]}
+      ]
+    }
