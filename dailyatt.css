@@ -1,0 +1,31 @@
+table,th,td{
+	border: 3px solid gray;
+	border-collapse: collapse;
+	margin: 5% auto;
+	padding: 20px;
+	text-align: left;
+	background: white;
+	font-family: 'Merriweather', serif;
+}
+body{
+background: #8e9eab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+font-size: 1.5rem;
+
+}
+th{
+	text-decoration: underline;
+}
+h1{
+	text-align: center;
+}
+form{
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+
+}
+  div.ui-datepicker {
+    font-size: 62.5%;
+}

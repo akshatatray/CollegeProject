@@ -1,0 +1,85 @@
+h1{
+	background: #343a40;
+	color: white;
+	text-align: center;
+	height: 80px;
+	padding-top: 20px;
+	
+}
+body{
+	background: #8e9eab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+font-family: 'Playfair Display', serif;
+font-family: 'Tenali Ramakrishna', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+
+}
+.fa-bell{
+	float: right;
+	padding-right: 50px;
+	position: absolute;
+	top: 32px;
+	color: white;
+	right: 40px;
+
+
+}
+#mark{
+	float: right;
+	margin-right: 30px;
+	margin-top: 30px;
+}
+#show{
+	position: absolute;
+	left: 30px;
+	top: 120px;
+}
+h4{
+	color: #343a40;
+}
+ul{
+list-style:none;
+padding-top: 100px;
+}
+li{
+	background: white;
+	margin: 50px auto;
+	font-weight: bold;
+	height: 120px;
+	width: 600px;
+
+}
+.del{
+	float: right;
+	background: #e74c3c;
+	color: white;
+	text-align: center;
+	width: 0;
+	display: inline-block;
+	transition: 0.2s linear;
+	opacity: 0;
+	height: 120px;
+}
+.check{
+	float: right;
+	background: #32CD32;
+	color: white;
+	text-align: center;
+	width: 0;
+	display: inline-block;
+	transition: 0.2s linear;
+	opacity: 0;
+	height: 120px;
+
+}
+li:hover .check{
+width: 60px;
+opacity: 1.0;
+
+}
+li:hover .del{
+width: 60px;
+opacity: 1.0;
+
+}
