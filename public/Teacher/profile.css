@@ -1,0 +1,21 @@
+.container {
+     position: relative;
+     left: 5%;
+     margin-top: 50px;
+     width: 800px;
+     height: 540px;
+     background: #f8f9fa;
+     padding: 50px;
+}
+h2, p {
+     padding-left: 10px;
+     background: white;
+     height: 50px;
+     width: 75%;
+     border-radius: 0.3rem;
+     box-shadow: 2px 2px 20px -10px rgb(59, 59, 59);
+}
+p {
+     height: 30px;
+     width: 50%;
+}

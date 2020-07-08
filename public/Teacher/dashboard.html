@@ -15,10 +15,7 @@
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
           integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
           crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-     <link rel="stylesheet" href="home.css">
-     <link rel="stylesheet" href="register.css">
+     <link rel="stylesheet" href="sidebar.css">
 
 
      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -29,7 +26,7 @@
 
 <body>
      <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-          <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">{User's Name}</a>
+          <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="profile.html">{User's Name}</a>
           <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse"
                data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
                aria-label="Toggle navigation">
@@ -53,7 +50,7 @@
                     <div class="sidebar-sticky pt-3">
                          <ul class="nav flex-column">
                               <li class="nav-item">
-                                   <a class="nav-link" href="#">
+                                   <a class="nav-link active" href="dashboard.html">
                                         <svg class="bi bi-house" width="1em" height="1em" viewBox="0 0 16 16"
                                              fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                              <path fill-rule="evenodd"
@@ -66,7 +63,7 @@
                                    </a>
                               </li>
                               <li class="nav-item">
-                                   <a class="nav-link" href="list.html">
+                                   <a class="nav-link" href="student-list.html">
                                         <svg class="bi bi-list-check" width="1em" height="1em" viewBox="0 0 16 16"
                                              fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                              <path fill-rule="evenodd"
@@ -105,7 +102,7 @@
                                    </a>
                               </li>
                               <li class="nav-item">
-                                   <a class="nav-link" href="#">
+                                   <a class="nav-link" href="calender.html">
                                         <svg class="bi bi-table" width="1em" height="1em" viewBox="0 0 16 16"
                                              fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                              <path fill-rule="evenodd"
@@ -119,7 +116,7 @@
                                    </a>
                               </li>
                               <li class="nav-item">
-                                   <a class="nav-link active" href="register.html">
+                                   <a class="nav-link" href="register.html">
                                         <svg class="bi bi-list-check" width="1em" height="1em" viewBox="0 0 16 16"
                                              fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                              <path fill-rule="evenodd"
@@ -140,39 +137,56 @@
      </div>
 
      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-          <form id="teacher" class="form-signin-teacher">
-               <div class="form-label-group">
-                    <input type="text" #name class="form-control" placeholder="Name" required >
-                    <label for="inputName">
-                         Name
-                    </label>
-               </div>
-               <div class="form-label-group">
-                    <input type="tel" #mnum class="form-control" placeholder="Mobile Number" required >
-                    <label for="inputMobileNumber">
-                         Mobile Number
-                    </label>
-               </div>
-               <div class="form-label-group">
-                    <input type="email" #email class="form-control" placeholder="Email address" required >
-                    <label for="inputEmail">
-                         Email address
-                    </label>
-               </div>
-               <div class="form-label-group">
-                    <input type="password" #password class="form-control" placeholder="Password" required>
-                    <label for="inputPassword">
-                         Password
-                    </label>
-               </div>
-               <div class="form-label-group">
-                    <input type="text" #dept class="form-control" placeholder="Department" required >
-                    <label for="inputName">
-                         Department
-                    </label>
-               </div>
-               <button class="btn btn-lg btn-primary btn-block" type="button">Register New Teacher</button>
-          </form>
+          <div id="linechart-ceit" class="line-chart"></div>
+          <div id="linechart-cs-a" class="line-chart"></div>
      </main>
+
+
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+     <script type="text/javascript">
+          google.charts.load('current', { 'packages': ['corechart'] });
+          google.charts.setOnLoadCallback(drawChart);
+
+          // Draw the chart and set the chart values
+          function drawChart() {
+               var jsonData = $.ajax({
+                    url: "getData.php",
+                    dataType: "json",
+                    async: false
+               }).responseText;
+
+               // Optional; add a title and set the width and height of the chart
+               let optionsCeit = {
+                    title: 'CEIT Attendance',
+                    curveType: 'function',
+                    legend: { position: 'bottom' }
+               };
+               let dataCs1 = google.visualization.arrayToDataTable([
+                    ['Task', 'No. of Students Present'],
+                    ['Monday', 45],
+                    ['Tuesday', 52],
+                    ['Wednesday', 64],
+                    ['Thursday', 60],
+                    ['Friday', 50],
+                    ['Saturday', 24]
+               ]);
+               // Optional; add a title and set the width and height of the chart
+               let optionsCs1 = {
+                    title: 'CS-A Attendance',
+                    curveType: 'function',
+                    legend: { position: 'bottom' }
+               };
+               var data = new google.visualization.DataTable(jsonData);
+               // Display the chart inside the <div> element with id="piechart"
+               var chart = new google.visualization.LineChart(document.getElementById('linechart-ceit'));
+               chart.draw(data, optionsCeit);
+               var chart = new google.visualization.LineChart(document.getElementById('linechart-cs-a'));
+               chart.draw(dataCs1, optionsCs1);
+          }
+     </script>
+
+
 </body>
+
 </html>

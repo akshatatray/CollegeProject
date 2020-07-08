@@ -1,0 +1,18 @@
+.container {
+     position: relative;
+     left: 8%;
+     margin-top: 50px;
+     width: 950px;
+     height: 540px;
+     background: #f8f9fa;
+     padding: 50px;
+     display: flex;
+     flex-direction: column;
+}
+.select {
+     height: 50px;
+     border-bottom: 1px solid grey;
+}
+select {
+     width: 150px;
+}

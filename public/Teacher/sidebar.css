@@ -1,16 +1,3 @@
-body {
-  font-size: .875rem;
-}
-
-.feather {
-  width: 16px;
-  height: 16px;
-  vertical-align: text-bottom;
-}
-
-/*
- * Sidebar
- */
 
 .sidebar {
   position: fixed;
@@ -93,7 +80,6 @@ body {
   border-width: 0;
   border-radius: 0.25rem;
 }
-
 .btn {
   margin-right: 0.5rem;
 }
@@ -110,13 +96,6 @@ body {
   border-color: transparent;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
 }
-
-.table {
-     margin-top: 1rem;
-     border: 1px solid black;
-     border-radius: 0.25rem;
-}
-
 .nav-link:hover {
-     color: #007bff;
+  color: #007bff;
 }
