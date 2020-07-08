@@ -1,0 +1,49 @@
+.card-img-top{
+	border-radius: 50%;
+	height: 120px;
+	width: 120px;
+	display: block;
+	margin-left: 80px;
+	cursor:pointer;
+
+}
+#account{
+	margin-left: 120px;
+}
+#acc{
+	color: gray;
+}
+.id{
+	border: 1px solid #D3D3D3;
+	border-radius: 2px;
+	padding: 4px 4px;
+	font-weight: bold;
+	padding-left: 15px;
+}
+.btn-danger{
+float: right;	 
+ 
+}
+.acclink:hover{
+	background: #4C4C4C;
+	text-decoration: none;
+	box-shadow: 2px solid grey;
+	text-shadow: 1px solid black;
+	color: white;
+
+}
+.acclink{
+	color: #008081;
+
+}
+.acclink1:hover{
+	background: #990000;
+	text-decoration:none;
+    color: white;
+}
+.acclink1{
+   color: red;
+}
+body{
+	font-family: 'Merriweather', serif;
+}
