@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+          crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+          crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="profile1.css">
+     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+     <title>Profile</title>
+</head>
+
+<body>
+     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+          <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">{User's Name}</a>
+          <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse"
+               data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+               aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+          </button>
+          
+     </nav>
+
+     <div class="container-fluid float-right">
+          <div class="row">
+               <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                    <div class="sidebar-sticky pt-3">
+                         <ul class="nav flex-column">
+                              <li class="nav-item">
+                                   <a class="nav-link active" href="#">
+                                        <i class="fas fa-user-circle"></i>
+                                        <span data-feather="home"></span>
+                                        Profile
+                                   </a>
+                              </li>
+                              <li class="nav-item">
+                                   <a class="nav-link" href="#">
+                                        <svg class="bi bi-list-check" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd"
+                                                  d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z" />
+                                        </svg>
+                                        Attendance
+                                   </a>
+                              </li>
+                              <li class="nav-item">
+                                   <a class="nav-link" href="attendance.html">
+                                        <i class="fas fa-bell"></i>
+                                        Notification
+                                   </a>
+                              </li>
+                              
+                              
+                              <li class="nav-item logOutBtn">
+                                   <a class="nav-link text-danger" href="#">
+                                        Log Out
+                                   </a>
+                              </li>
+                         </ul>
+                    </div>
+               </nav>
+          </div>
+     </div>
+     <div class="container">
+     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+      <div class="row">
+      <div class="col-lg 3 col-md-3 col-sm-12 col-xs-12">
+
+          <div class="card">
+      <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" class="card-img-top"  alt="...">
+      <i class="fas fa-camera fa-3x"></i>
+      <div class="card-body ">
+        <p class="card-text"> <span><strong>NAME:</strong></span> Vartika Jain</p>
+        <hr>
+        <p class="card-text"> <span><strong>BRANCH:</strong></span> Ceit</p>
+        <hr>
+        <p class="card-text"> <span><strong>ADMISSION NO:</strong></span> 2018bci1059</p>
+        <hr>
+        <a href="#" id="change" style="padding-right: 200px; padding-left: 270px;">Change Password</a>
+
+  </div></div>
+</div>
+</div>
+</main>
+</div>
+  <div class="container">
+<form method="post"><div id="popup">
+     <div id="popup-content">
+          <i class="fas fa-window-close" id="close"></i>
+          <h1 id="h111">Change Password</h1>
+          <input type="password" placeholder="Old Password" name="password" id="star">
+          <hr>
+          <input type="password" placeholder="New Password" name="password">
+          <button type="button" class="btn btn-secondary" id="loginbutton" >Change</button>
+     </div>
+</div>
+</form>
+     
+     <script type="text/javascript" src="profile.js"></script>
+</body>
