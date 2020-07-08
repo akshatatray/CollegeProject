@@ -15,7 +15,10 @@
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
           integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
           crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
      <link rel="stylesheet" href="home.css">
+     <link rel="stylesheet" href="register.css">
 
 
      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -50,7 +53,7 @@
                     <div class="sidebar-sticky pt-3">
                          <ul class="nav flex-column">
                               <li class="nav-item">
-                                   <a class="nav-link active" href="#">
+                                   <a class="nav-link" href="#">
                                         <svg class="bi bi-house" width="1em" height="1em" viewBox="0 0 16 16"
                                              fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                              <path fill-rule="evenodd"
@@ -116,7 +119,7 @@
                                    </a>
                               </li>
                               <li class="nav-item">
-                                   <a class="nav-link" href="register.html">
+                                   <a class="nav-link active" href="register.html">
                                         <svg class="bi bi-list-check" width="1em" height="1em" viewBox="0 0 16 16"
                                              fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                              <path fill-rule="evenodd"
@@ -137,56 +140,140 @@
      </div>
 
      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-          <div id="linechart-ceit" class="line-chart"></div>
-          <div id="linechart-cs-a" class="line-chart"></div>
+          <div class="btn-container">
+               <button class="btn btn-primary" onclick="regTeacher()">Register New Teacher</button>
+               <button class="btn btn-primary" onclick="regStudent()">Register New Student</button>
+          </div>
+          <form id="teacher" class="form-signin-teacher" style="display: none;">
+               <div class="form-label-group">
+                    <input type="text" #name class="form-control" placeholder="Name" required >
+                    <label for="inputName">
+                         Name
+                    </label>
+               </div>
+               <div class="form-label-group">
+                    <input type="tel" #mnum class="form-control" placeholder="Mobile Number" required >
+                    <label for="inputMobileNumber">
+                         Mobile Number
+                    </label>
+               </div>
+               <div class="form-label-group">
+                    <input type="email" #email class="form-control" placeholder="Email address" required >
+                    <label for="inputEmail">
+                         Email address
+                    </label>
+               </div>
+               <div class="form-label-group">
+                    <input type="password" #password class="form-control" placeholder="Password" required>
+                    <label for="inputPassword">
+                         Password
+                    </label>
+               </div>
+               <div class="form-label-group">
+                    <input type="text" #dept class="form-control" placeholder="Department" required >
+                    <label for="inputName">
+                         Department
+                    </label>
+               </div>
+               <button class="btn btn-lg btn-primary btn-block" type="button">Register New Teacher</button>
+          </form>
+          <form id="student" class="form-signin" style="display: none;">
+               <div class="form-label-group">
+                    <input type="text" #name class="form-control" placeholder="Name" required >
+                    <label for="inputName">
+                         Name
+                    </label>
+               </div>
+               <div class="form-label-group">
+                    <input type="number" #rollnumber class="form-control" placeholder="Roll Number" required >
+                    <label for="inputRollNum">
+                         Roll Number
+                    </label>
+               </div>
+               <div class="form-label-group">
+                    <input type="number" #admissionnumber class="form-control" placeholder="Admission Number" required >
+                    <label for="inputRollNum">
+                         Admission Number
+                    </label>
+               </div>
+               <div class="form-label-group">
+                    <input type="text" #name class="form-control" placeholder="Mother's Name" required >
+                    <label for="inputMothersName">
+                         Mother's Name
+                    </label>
+               </div>
+               <div class="form-label-group">
+                    <input type="text" #name class="form-control" placeholder="Father's Name" required >
+                    <label for="inputFathersName">
+                         Father's Name
+                    </label>
+               </div>
+               <div class="form-label-group">
+                    <input type="date" #name class="form-control" placeholder="DOB" required >
+                    <label for="inputDOB">
+                         DOB
+                    </label>
+               </div>
+               <div class="form-label-group">
+                    <input type="text" #gender class="form-control" placeholder="Gender" required >
+                    <label for="inputGender">
+                         Gender
+                    </label>
+               </div>
+               <div class="form-label-group">
+                    <input type="text" #course class="form-control" placeholder="Course" required >
+                    <label for="inputCourse">
+                         Course
+                    </label>
+               </div>
+               <div class="form-label-group">
+                    <input type="text" #branch class="form-control" placeholder="Branch" required >
+                    <label for="inputBranch">
+                         Branch
+                    </label>
+               </div>
+               <div class="form-label-group">
+                    <input type="number" #year class="form-control" placeholder="Year" required >
+                    <label for="inputYear">
+                         Year
+                    </label>
+               </div>
+               <div class="form-label-group">
+                    <input type="text" #semester class="form-control" placeholder="Semester" required >
+                    <label for="inputSemester">
+                         Semester
+                    </label>
+               </div>
+               <div class="form-label-group">
+                    <input type="tel" #mnum class="form-control" placeholder="Mobile Number" required >
+                    <label for="inputMobileNumber">
+                         Mobile Number
+                    </label>
+               </div>
+               <div class="form-label-group">
+                    <input type="email" #email class="form-control" placeholder="Email address" required >
+                    <label for="inputEmail">
+                         Email address
+                    </label>
+               </div>
+               <div class="form-label-group">
+                    <input type="password" #password class="form-control" placeholder="Password" required>
+                    <label for="inputPassword">
+                         Password
+                    </label>
+               </div>
+               <button class="btn btn-lg btn-primary btn-block" type="button">Register New Student</button>
+          </form>
      </main>
-
-
-     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
      <script type="text/javascript">
-          google.charts.load('current', { 'packages': ['corechart'] });
-          google.charts.setOnLoadCallback(drawChart);
-
-          // Draw the chart and set the chart values
-          function drawChart() {
-               var jsonData = $.ajax({
-                    url: "getData.php",
-                    dataType: "json",
-                    async: false
-               }).responseText;
-
-               // Optional; add a title and set the width and height of the chart
-               let optionsCeit = {
-                    title: 'CEIT Attendance',
-                    curveType: 'function',
-                    legend: { position: 'bottom' }
-               };
-               let dataCs1 = google.visualization.arrayToDataTable([
-                    ['Task', 'No. of Students Present'],
-                    ['Monday', 45],
-                    ['Tuesday', 52],
-                    ['Wednesday', 64],
-                    ['Thursday', 60],
-                    ['Friday', 50],
-                    ['Saturday', 24]
-               ]);
-               // Optional; add a title and set the width and height of the chart
-               let optionsCs1 = {
-                    title: 'CS-A Attendance',
-                    curveType: 'function',
-                    legend: { position: 'bottom' }
-               };
-               var data = new google.visualization.DataTable(jsonData);
-               // Display the chart inside the <div> element with id="piechart"
-               var chart = new google.visualization.LineChart(document.getElementById('linechart-ceit'));
-               chart.draw(data, optionsCeit);
-               var chart = new google.visualization.LineChart(document.getElementById('linechart-cs-a'));
-               chart.draw(dataCs1, optionsCs1);
+          function regStudent() {
+               document.getElementById('student').style.display = "block";
+               document.getElementById('teacher').style.display = "none";
+          }
+          function regTeacher() {
+               document.getElementById('student').style.display = "none";
+               document.getElementById('teacher').style.display = "block";
           }
      </script>
-
-
 </body>
-
 </html>
